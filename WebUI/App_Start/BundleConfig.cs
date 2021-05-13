@@ -25,6 +25,18 @@ namespace WebUI
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new Bundle("~/bundles/angular").Include(
+                      "~/Scripts/dist/runtime*",
+                      "~/Scripts/dist/polyfills*",
+                      "~/Scripts/dist/main*"
+                      ));
+
+            /*bundles.Add(new Bundle("~/bundles/angular/main").Include(
+                   "~/Scripts/dist/main*"
+                   ));*/
+
+            //BundleTable.EnableOptimizations = false;
         }
     }
 }
